@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Necessary Conditions vs Drivers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Not Every Analytics Question Is About What Drives the Outcome</h1>
+      <p class="subtitle">
+        Using Necessary Condition Analysis to distinguish average effects from minimum requirements
+      </p>
+      <div class="hero-buttons">
+        <a href="https://github.com/mah-trigui/necessary-conditions-vs-drivers" class="btn primary">View Repository</a>
+        <a href="#idea" class="btn secondary">Explore Method</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Overview</h2>
+        <p>
+          This project highlights a distinction that is often missed in analytics work: some questions are about what improves an outcome on average, while others are about what must already be true for that outcome to be possible at all.
+        </p>
+        <p>
+          In the enterprise survey setting, the goal was not only to identify variables associated with performance, but also to detect constraint variables that act like minimum requirements. That called for <strong>Necessary Condition Analysis (NCA)</strong>, not just standard correlation or regression thinking.
+        </p>
+        <p>
+          The result is a different interpretation layer: from average drivers to structural floors.
+        </p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>Architecture</h2>
+        <img src="images/architecture.jpg" alt="Necessary conditions vs drivers diagram" class="architecture-image" />
+      </div>
+    </section>
+
+    <section class="section" id="idea">
+      <div class="container">
+        <h2>The Core Idea</h2>
+        <p>
+          Regression, correlation, and feature importance answer a familiar question:
+        </p>
+        <div class="metric-box">
+          <p><strong>Which variables are associated with better outcomes on average?</strong></p>
+        </div>
+        <p>
+          But some business and policy questions are different:
+        </p>
+        <div class="metric-box">
+          <p><strong>What must be true before high performance is even achievable?</strong></p>
+        </div>
+        <p>
+          NCA answers that second question by looking for empty regions in the data space and estimating a ceiling line. The insight is not that a variable helps on average, but that below a certain threshold, the desired outcome does not appear.
+        </p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>Drivers vs Necessary Conditions</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Average-Effect View</h3>
+            <p>
+              Correlation and regression estimate the expected directional effect of a variable across the observed population.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Constraint View</h3>
+            <p>
+              NCA identifies variables that act as bottlenecks or floor constraints: without enough of them, high outcomes are absent.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Interpretation Shift</h3>
+            <p>
+              The conclusion changes from “this helps” to “this is required before the target becomes feasible.”
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Why this matters</h2>
+        <ul class="clean-list">
+          <li>prevents using average-effect tools for fundamentally different questions</li>
+          <li>surfaces bottlenecks that standard regression may understate</li>
+          <li>changes decision logic from optimization to feasibility</li>
+          <li>is useful in policy, operations, capability building, and constraint analysis</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>How the method reframes analysis</h2>
+        <pre>
+Regression asks:
+  "What increases Y on average?"
+
+NCA asks:
+  "What minimum level of X is required before high Y becomes possible?"
+
+This is not just a different statistic.
+It is a different analytical question.
+        </pre>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Where this pattern generalizes</h2>
+        <ul class="clean-list">
+          <li>enterprise growth and productivity analysis</li>
+          <li>capability maturity assessments</li>
+          <li>policy and development constraints</li>
+          <li>organizational readiness and operational thresholds</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>Key Takeaway</h2>
+        <div class="metric-box">
+          <p><strong>Some variables are not drivers. They are constraints.</strong></p>
+          <p>
+            Choosing between driver analysis and necessary-condition analysis starts with framing the business question correctly.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built as a public project showcase for analytical framing and necessary-condition thinking.</p>
+    </div>
+  </footer>
+</body>
+</html>
